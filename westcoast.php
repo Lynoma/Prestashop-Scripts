@@ -192,11 +192,11 @@ if (!defined('PS_MASS_PRODUCT_CREATION')) {
 $prod = new Product();
 
 $val = 0;
-$handle = fopen ("/home/papi8268/allofiestaloc.com/17130080STOCK.csv","r");
+$handle = fopen ("/17130080STOCK.csv","r");
 $linecount=0;
 while (fgets($handle) !== false) $linecount++;
 fclose($handle);
-$handle = fopen ("/home/papi8268/allofiestaloc.com/17130080STOCK.csv","r");
+$handle = fopen ("/17130080STOCK.csv","r");
 for($b = 0; $b < $linecount; $b++) {
     $data = fgetcsv ($handle, 1000, "|");
     $data = array_map("utf8_encode", $data); //added
